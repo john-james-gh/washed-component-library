@@ -1,0 +1,50 @@
+{
+    "name": "washed-component-library",
+    "version": "0.1.5",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc && tailwindcss -i ./src/index.css -o dist/styles.css",
+        "build-storybook": "storybook build",
+        "clean": "del-cli dist .storybook-static package washed-component-library-*.tgz",
+        "format": "prettier --write . && sort-package-json",
+        "format-check": "prettier --check . && sort-package-json --check",
+        "prepublishOnly": "npm run build",
+        "storybook": "storybook dev -p 6006",
+        "test-publish": "npm run build && npm pack && tar -xzf washed-component-library-*.tgz"
+    },
+    "devDependencies": {
+        "@chromatic-com/storybook": "^3.2.3",
+        "@storybook/addon-essentials": "^8.4.7",
+        "@storybook/addon-interactions": "^8.4.7",
+        "@storybook/blocks": "^8.4.7",
+        "@storybook/react": "^8.4.7",
+        "@storybook/react-vite": "^8.4.7",
+        "@storybook/test": "^8.4.7",
+        "@tailwindcss/forms": "^0.5.9",
+        "@tailwindcss/typography": "^0.5.15",
+        "autoprefixer": "^10.4.20",
+        "del-cli": "^6.0.0",
+        "mkdirp": "^3.0.1",
+        "postcss": "^8.4.49",
+        "prettier": "^3.4.2",
+        "prettier-plugin-tailwindcss": "^0.6.9",
+        "prop-types": "^15.8.1",
+        "sort-package-json": "^2.12.0",
+        "storybook": "^8.4.7",
+        "tailwindcss": "^3.4.17",
+        "typescript": "^5.7.2"
+    }
+}
