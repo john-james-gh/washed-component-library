@@ -16,7 +16,7 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "tsc && tailwindcss -i ./src/index.css -o dist/styles.css",
+        "build": "npm run clean && tsc && tailwindcss -i ./src/index.css -o dist/styles.css",
         "build-storybook": "storybook build",
         "clean": "del-cli dist .storybook-static package washed-component-library-*.tgz",
         "format": "prettier --write . && sort-package-json",
