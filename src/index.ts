@@ -1,2 +1,2 @@
-export { Layout } from "./layout";
-export type { LayoutProps } from "./layout";
+export { Article } from "./article";
+export type { ArticleProps } from "./article";
