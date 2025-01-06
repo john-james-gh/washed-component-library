@@ -4,14 +4,9 @@
         "lib": ["DOM", "ES2020"],
         "module": "ESNext",
         "moduleResolution": "Node",
-        "outDir": "dist",
-        "declaration": true,
-        "declarationMap": true,
-        "sourceMap": true,
         "jsx": "react-jsx",
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["src"],
-    "exclude": ["src/**/*.stories.tsx"]
+    "include": ["src"]
 }
