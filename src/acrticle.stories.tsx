@@ -12,8 +12,16 @@ export const Default: Story = {
     args: {
         children: (
             <>
-                <p>"Hello, world!"</p>
-                <p>"Hello, world, again!"</p>
+                <Article.Header aria-labelledby="articleHeading">
+                    <h1 id="articleHeading">Hello, world from Header!</h1>
+                </Article.Header>
+                <Article.Body>
+                    <p>"Hello, world from Body!"</p>
+                </Article.Body>
+                <Article.Footer>
+                    <p>"Hello, world from Footer!"</p>
+                    <Article.Time>Jan 23 2025</Article.Time>
+                </Article.Footer>
             </>
         ),
     },
